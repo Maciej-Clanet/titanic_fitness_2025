@@ -29,3 +29,13 @@
  #main-content{ 
   flex: 1; 
  } 
+
+ .primary-btn{
+  color: var(--text-col);
+  font-weight: 600;
+  font-size: 20px;
+  text-decoration: none;
+  background-color: var(--primary-col);
+  padding: 4px 8px;
+  border-radius: 8px;
+ }
