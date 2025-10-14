@@ -3,6 +3,14 @@
   line-height: 1.5; 
   font-weight: 400; 
 
+  --primary-col: #C10000;
+  --dark-blue: #072034;
+  --text-col: #FFFFFF;
+  --bg-col: #020913;
+
+  background-color: var(--bg-col);
+  color: var(--text-col);
+
   font-synthesis: none; 
   text-rendering: optimizeLegibility; 
   -webkit-font-smoothing: antialiased; 
