@@ -1,0 +1,13 @@
+.articles-section{
+    background: 
+    linear-gradient(180deg, var(--bg-col) 0%, rgba(0, 0, 0, 0) 30%), 
+    url(../../assets/iceberg.png);
+
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center top;
+
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}

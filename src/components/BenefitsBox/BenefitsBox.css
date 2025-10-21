@@ -1,0 +1,30 @@
+.benefit-box{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    padding: 16px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.benefit{
+    background-color: var(--dark-blue);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    text-align: center;
+    padding: 16px;
+
+    background-image: url(../../assets/wave_short.png);
+    background-repeat: no-repeat;
+    background-size: 100% 50px;
+    background-position: bottom;
+    > img{
+        width: 125px;
+    }
+}
+.benefit.long{
+    grid-column: span 2;
+    background-image: url(../../assets/ship_wave_thin.png);
+}
