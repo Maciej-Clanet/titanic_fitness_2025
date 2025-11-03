@@ -28,3 +28,11 @@
     grid-column: span 2;
     background-image: url(../../assets/ship_wave_thin.png);
 }
+
+@media only screen and (max-width: 660px){
+    .benefit-box{
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+}
