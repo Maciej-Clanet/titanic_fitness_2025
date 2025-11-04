@@ -1,0 +1,23 @@
+.auth-layout{
+    display: flex;
+
+    >.hero-banner{
+        flex: 1;
+    }
+
+}
+
+.auth-form-column{
+    border: 2px solid red;
+    flex: 1;
+}
+
+@media only screen and (max-width: 550px){
+    .auth-layout{
+        flex-direction: column;
+        min-height: 100vh;
+    }
+    .hero-banner{
+        max-height: 300px;
+    }
+}
