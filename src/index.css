@@ -38,4 +38,5 @@
   background-color: var(--primary-col);
   padding: 4px 8px;
   border-radius: 8px;
+  border: none;
  }
