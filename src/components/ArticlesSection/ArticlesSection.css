@@ -9,5 +9,51 @@
 
     display: flex;
     flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+.line{
+    height: 1px;
+    width: 80%;
+    background-color: rgba(255,255,255,0.3);
+}
+.article-thumbnails{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 32px;
+    width: 100%;
+    max-width: 800px;
+}
+.article-thumb{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0,0,0,0.6);
+    backdrop-filter: blur(8px);
+    gap: 8px;
+    border: 1px solid rgba(255,255,255,0.4);
+    /* width: 100%; */
+    /* max-width: 200px; */
+    padding: 4px;
+}
+.thumb-title{
+    font-weight: 700;
+    font-size: 32px;
+}
+.thumb-desc{
+    flex: 1;
+}
+.thumb-link{
+    background-color: var(--primary-col);
+    color: var(--text-white);
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 4px;
+    padding: 4px 8px;
+    align-self: flex-end;
+}
+.thumb-centerer{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
