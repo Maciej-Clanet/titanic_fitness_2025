@@ -4,8 +4,8 @@ import { Link } from "react-router";
 function ArticleThumbnail({ title, desc, link }) {
   return (
     <div className="article-thumb">
-      <p class="thumb-title">{title}</p>
-      <p class="thumb-desc">{desc}</p>
+      <p className="thumb-title">{title}</p>
+      <p className="thumb-desc">{desc}</p>
       <Link className="thumb-link" to={link}>
         Read More
       </Link>
@@ -23,7 +23,7 @@ export default function ArticlesSection() {
       <div className="line" />
       <h3>Hit the books</h3>
 
-      <div class="thumb-centerer">
+      <div className="thumb-centerer">
         <div className="article-thumbnails">
           <ArticleThumbnail
             title="test"
