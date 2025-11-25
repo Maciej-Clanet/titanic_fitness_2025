@@ -3,6 +3,8 @@ import HeroBanner from "../../components/HeroBanner/HeroBanner"
 import AuthImage1 from "../../assets/AuthBanner_01.png"
 import { useState } from "react";
 
+import { useUser } from "../../contexts/UserContext";
+
 function LoginForm({ toggle }) {
     return (
         <form className="auth-form">
@@ -12,8 +14,20 @@ function LoginForm({ toggle }) {
 }
 
 function RegisterForm({ toggle }) {
+
+    const {user, login} = useUser();
+
+    function registerUser(){
+        //temporary function for testing
+        login({
+            "email" : "temp@gmail.com",
+            "displayName" : "bob"
+        });
+    }
+
     return (
-        <form className="auth-form">
+        <form className="auth-form" onSubmit={registerUser}>
+            {user ? <h1>Current User: {user.displayName}</h1> : null}
             <input type="email" className="auth-input" placeholder="Email" />
             <input type="password" className="auth-input" placeholder="Password" />
             <input type="text" className="auth-input" placeholder="Display Name" />

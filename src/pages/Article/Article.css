@@ -1,0 +1,10 @@
+.article-page{
+    margin: 0 auto;
+    margin-top: 150px;
+    max-width: 800px;
+    border: 1px solid red;
+
+    >h1{
+        text-align: center;
+    }
+}
