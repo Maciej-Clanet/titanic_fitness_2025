@@ -27,3 +27,7 @@ export function UserProvider({ children }) {
         </UserContext.Provider> 
     ); 
 } 
+
+export function useUser(){
+    return useContext(UserContext);
+}

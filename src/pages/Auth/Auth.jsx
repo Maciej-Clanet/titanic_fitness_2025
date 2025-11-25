@@ -3,17 +3,35 @@ import HeroBanner from "../../components/HeroBanner/HeroBanner"
 import AuthImage1 from "../../assets/AuthBanner_01.png"
 import { useState } from "react";
 
+import { useUser } from "../../contexts/UserContext";
+
 function LoginForm({ toggle }) {
     return (
         <form className="auth-form">
-            Login Form
-            <button onClick={toggle}>Register</button>
+            <input type="email" className="auth-input" placeholder="Email" />
+            <input type="password" className="auth-input" placeholder="Password" />
+            <div className="toggle-section">
+                <button type="submit" className="primary-btn">Login </button>
+                <div className="toggle-group">
+                    <p>Don't have an account?</p>
+                    <button className="toggle-btn" onClick={toggle}>Register</button>
+                </div>
+            </div>
         </form>)
 }
 
 function RegisterForm({ toggle }) {
+    const {user, login} = useUser();
+
+    function registerUser(){
+        login({
+            "username" : "goober",
+            "email" : "goober@goobco.com"
+        })
+    }
+
     return (
-        <form className="auth-form">
+        <form className="auth-form" onSubmit={registerUser}>
             <input type="email" className="auth-input" placeholder="Email" />
             <input type="password" className="auth-input" placeholder="Password" />
             <input type="text" className="auth-input" placeholder="Display Name" />
