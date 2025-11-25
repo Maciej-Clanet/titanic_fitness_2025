@@ -6,10 +6,14 @@ import { useState } from "react";
 import { useUser } from "../../contexts/UserContext";
 
 function LoginForm({ toggle }) {
+
+    const [password, setPassword] = useState("");
+    const [email, setEmail] = useState("");
+
     return (
         <form className="auth-form">
-            <input type="email" className="auth-input" placeholder="Email" />
-            <input type="password" className="auth-input" placeholder="Password" />
+            <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} className="auth-input" placeholder="Email" />
+            <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} className="auth-input" placeholder="Password" />
             <div className="toggle-section">
                 <button type="submit" className="primary-btn">Login </button>
                 <div className="toggle-group">
@@ -21,20 +25,24 @@ function LoginForm({ toggle }) {
 }
 
 function RegisterForm({ toggle }) {
-    const {user, login} = useUser();
+    const { user, login } = useUser();
 
-    function registerUser(){
+    const [username, setUsername] = useState("");
+    const [password, setPassword] = useState("");
+    const [email, setEmail] = useState("");
+
+    function registerUser() {
         login({
-            "username" : "goober",
-            "email" : "goober@goobco.com"
+            "username": "goober",
+            "email": "goober@goobco.com"
         })
     }
 
     return (
         <form className="auth-form" onSubmit={registerUser}>
-            <input type="email" className="auth-input" placeholder="Email" />
-            <input type="password" className="auth-input" placeholder="Password" />
-            <input type="text" className="auth-input" placeholder="Display Name" />
+            <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} className="auth-input" placeholder="Email" />
+            <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} className="auth-input" placeholder="Password" />
+            <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} className="auth-input" placeholder="Display Name" />
 
             <div className="toggle-section">
                 <button type="submit" className="primary-btn">Register Now</button>

@@ -30,7 +30,7 @@
 .auth-form{
     display: flex;
     flex-direction: column;
-    /* border: 1px solid red; */
+
     width: 100%;
     padding: 32px;
     gap: 8px;
