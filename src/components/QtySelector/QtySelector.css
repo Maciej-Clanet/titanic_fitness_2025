@@ -1,0 +1,5 @@
+.qty-selector {
+  > input {
+    pointer-events: none;
+  }
+}
