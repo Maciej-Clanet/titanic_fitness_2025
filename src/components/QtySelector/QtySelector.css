@@ -1,0 +1,11 @@
+.qty-selector{
+    display: flex;
+    gap: 8px;
+}
+
+.qty-selector > input{
+    pointer-events: none;
+    width: 50px;
+    text-align: center;
+    border-radius: 4px;
+}

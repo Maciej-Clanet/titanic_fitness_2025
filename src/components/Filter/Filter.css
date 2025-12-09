@@ -1,0 +1,14 @@
+.filter{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.filter-btn{
+    border: none;
+    color: white;
+    background: none;
+}
+
+.filter-btn.active{
+    color: var(--primary-col);
+}
